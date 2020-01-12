@@ -1,0 +1,46 @@
+.page-main__title
+  margin: 0
+  width: 75%
+  font-family: 'TT NormsMedium'
+  font-size: 32px
+  font-weight: 500
+  line-height: 120%
+  letter-spacing: -0.02em
+
+.page-main__container
+  max-width: 1244px
+  padding-left: 10px
+  padding-right: 10px
+  width: 100%
+  margin: 0 auto
+
+.page-main__title--tablet
+  display: none
+
+@media screen and (max-width: 1023px)
+  .page-main__title--tablet
+    display: block
+
+  .page-main__title--desktop
+    display: none
+
+  .page-main__container
+    padding-left: 24px
+    padding-right: 24px
+
+  .page-main__title
+    font-size: 28px
+    line-height: 130%
+
+@media screen and (max-width: 767px)
+  .page-main__container
+    padding-left: 12px
+    padding-right: 12px
+
+  .page-main__title
+    width: 95%
+    font-size: 24px
+    line-height: 130%
+    letter-spacing: -0.02em
+    font-weight: 400
+

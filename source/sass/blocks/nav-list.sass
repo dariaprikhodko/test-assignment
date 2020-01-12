@@ -1,0 +1,109 @@
+.nav-list
+  display: flex
+  width: auto
+  margin-top: 159px
+
+.nav-list__item
+  color: $font-grey
+  cursor: pointer
+  padding: 19px 22px
+  line-height: 19px
+  transition: all .2s ease-in-out
+
+  &:hover
+    color: #000000
+    background-color: $light-grey
+
+.page-header__wrap
+  display: none
+
+@media screen and (max-width: 1023px)
+  .nav-list
+    padding-left: 25px
+
+  .nav-list__item
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: -0.02em
+    padding: 16px 24px
+
+@media screen and (max-width: 767px)
+  .nav-list__item
+    padding: 16px 41px 16px 16px
+    font-size: 10px
+    line-height: 140%
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    color: #1C1B17
+    background-color: #FAFAFA
+
+  .page-header__wrap
+    display: flex
+
+  .page-header__header
+    display: flex
+    flex-direction: column
+    padding: 16px 20px 16px 13px
+    cursor: pointer
+    background-color: $light-grey
+
+  .page-header__current
+    margin: 0
+    padding: 0
+    font-size: 10px
+    line-height: 140%
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    color: #4D4D4D
+
+  .nav-list__item:hover
+    background: #FFE699
+    box-shadow: 0px 16px 32px rgba(255, 204, 51, 0.16), 0px 4px 8px rgba(255, 204, 51, 0.08)
+
+  .page-header__current
+    font-size: 10px
+    line-height: 140%
+    display: flex
+    align-items: center
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    color: #1C1B17
+
+  .page-header__mobile
+    position: relative
+    width: 296px
+    margin: 0 auto
+    margin-top: 160px
+    display: flex
+    flex-direction: column
+    background-color: #ffffff
+
+  .nav-list
+    position: absolute
+    display: none
+    margin-top: 0
+    padding-left: 0
+    top: 100%
+    left: 0
+    width: 100%
+    z-index: 10000
+    background-color: #ffffff
+
+  .page-header__icon
+    display: block
+    transform: translateY(-50%) rotate(0  )
+    width: 5px
+    height: 2.5px
+    padding: 0
+    margin-left: auto
+    margin-top: auto
+    margin-bottom: auto
+    background-color: $font-grey90
+    background-position: center
+    background-image: url("../img/arrow-select.svg")
+    background-repeat: no-repeat
+    transition: all 0.2s ease-in-out
+    
+  .page-header__mobile.is-active .nav-list
+    display: block
+  

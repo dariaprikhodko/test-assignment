@@ -1,0 +1,232 @@
+.components
+  padding-top: 64px
+  padding-bottom: 50px
+
+.components__note
+  margin: 0
+  margin-top: 16px
+  margin-bottom: 32px
+  font-size: 16px
+  line-height: 160%
+  letter-spacing: -0.02em
+  color: $font-grey
+
+.components-form
+  margin-bottom: 24px
+
+.components-list__img
+  display: block
+  font-size: 0
+
+.components-list
+  display: flex
+  flex-wrap: wrap
+  padding: 0
+  padding-top: 24px
+  margin: 0 auto
+  margin-right: -10px
+  margin-left: -10px
+  list-style: none
+
+.components-list__item
+  position: relative
+  width: calc(100% / 4 - 28px)
+  min-height: 395px
+  display: flex
+  flex-direction: column
+  margin-right: 12px
+  margin-bottom: 24px
+  margin-left: 12px
+  background-color: #ffffff
+
+.components-list__container
+  background-color: #fff
+  padding: 16px
+  position: absolute
+  -webkit-transition: .3s
+  -o-transition: .3s
+  transition: .3s
+  top: 112%
+  left: 0
+  right: 0
+  -webkit-transform: translateY(-50px)
+  -ms-transform: translateY(-50px)
+  -o-transform: translateY(-50px)
+  transform: translateY(-50px)
+  display: block
+  width: 100%
+  z-index: 999
+  opacity: 0
+  border-top: 1px solid $light-grey
+
+.components-list__item:hover
+  .components-list__container
+    opacity: 1
+
+.components-list__info
+  display: flex
+  flex-direction: column
+  padding: 16px 52px 16px 16px
+  height: 100%
+
+.components-list__title
+  margin: 0
+  width: 220px
+  font-size: 14px
+  font-weight: 700
+  line-height: 140%
+  letter-spacing: -0.03em
+
+.components-select__header
+  display: flex
+  padding: 12px 20px 10px 13px
+  cursor: pointer
+
+.components-select__wrap
+  display: flex
+  flex-direction: column
+
+.components-select__title
+  margin: 0
+  padding: 0
+  font-size: 8px
+  line-height: 9px
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  color: #4D4D4D
+
+.components-select__icon
+  margin-left: auto
+
+.components-select__item
+  padding: 17px 44px 17px 13px
+  font-size: 10px
+  line-height: 140%
+  display: flex
+  align-items: center
+  letter-spacing: 0.03em
+  text-transform: uppercase
+  color: #4D4D4D
+  border: 0.5px solid $light-grey
+
+.components-select__item:hover
+  background: #FFE699
+  box-shadow: 0px 16px 32px rgba(255, 204, 51, 0.16), 0px 4px 8px rgba(255, 204, 51, 0.08)
+
+.components-select__current
+  font-size: 10px
+  line-height: 140%
+  display: flex
+  align-items: center
+  letter-spacing: 0.03em
+  text-transform: uppercase
+  color: #1C1B17
+
+.components-select
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 248px
+  background-color: #ffffff
+
+.components-select__body
+  display: none
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  z-index: 10000
+  background-color: #ffffff
+
+.components-select__icon
+  display: block
+  transform: translateY(-50%) rotate(0  )
+  width: 5px
+  height: 2.5px
+  padding: 0
+  margin-left: auto
+  margin-top: auto
+  margin-bottom: auto
+  background-color: $font-grey90
+  background-position: center
+  background-image: url("../img/arrow-select.svg")
+  background-repeat: no-repeat
+  transition: all 0.2s ease-in-out
+
+.components-select.is-active .components-select__body
+  display: block
+
+@media screen and (max-width: 1023px)
+  .components
+    padding-top: 32px
+    padding-bottom: 20px
+
+  .components-list__title
+    width: 156px
+
+  .components-list__item
+    width: 224px
+    margin-bottom: 22px
+
+  .components-list__container
+    padding: 8px
+
+  .components__note
+    margin: 0
+    margin-top: 8px
+    margin-bottom: 32px
+
+  .components-list__info
+    padding: 16px 32px 16px 16px
+
+  .components-list__item:nth-child(13),
+  .components-list__item:nth-child(14),
+  .components-list__item:nth-child(15),
+  .components-list__item:nth-child(16)
+    display: none
+
+@media screen and (max-width: 767px)
+  .components 
+    max-width: 320px
+    margin: 0 auto
+    margin-top: 12px
+    padding-top: 25px
+    padding-bottom: 0
+
+  .components-list
+    padding-top: 15px
+    width: 296px
+    margin: 0 auto
+
+  .components-list__item
+    width: 100%
+    margin-right: 0
+    margin-left: 0
+    margin-bottom: 24px
+
+  .components-list__item:nth-child(4),
+  .components-list__item:nth-child(5),
+  .components-list__item:nth-child(6),
+  .components-list__item:nth-child(7),
+  .components-list__item:nth-child(8),
+  .components-list__item:nth-child(9),
+  .components-list__item:nth-child(10),
+  .components-list__item:nth-child(11),
+  .components-list__item:nth-child(12)
+    display: none
+
+  .components__note
+    margin-top: 15px
+    max-width: 296px
+    font-size: 14px
+    line-height: 140%
+    letter-spacing: -0.02em
+
+  .components-form
+    max-width: 296px
+
+  .components-wrap
+    max-width: 320px
+
+  .components-select
+    width: 100%

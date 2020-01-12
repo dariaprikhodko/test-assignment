@@ -1,0 +1,69 @@
+html
+  box-sizing: border-box
+
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+body
+  min-width: 320px
+  margin: 0
+  padding: 0
+  color: #000000
+  font-family: 'TT Norms', 'Arial', sans-serif
+  font-size: 16px
+  line-height: 24px
+  font-style: normal
+  font-weight: normal
+
+img
+  max-width: 100%
+  height: auto
+
+button 
+  cursor: pointer
+
+.visually-hidden:not(:focus):not(:active),
+input:focus.visually-hidden,
+input:active.visually-hidden 
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+  opacity: 0
+  transition: opacity 0.3s ease
+
+.stop-scroll
+  overflow: hidden
+  touch-action: none
+
+.left-padding
+  padding-left: 17px
+
+.page-main
+  background-color: $light-grey
+
+.show
+  display: block
+
+.hide
+  display: none
+
+.current
+  color: #000000
+  background-color: $light-grey
+
+.sticky
+  position: fixed
+  z-index: 101
+
+.stop
+  position: relative
+  z-index: 101

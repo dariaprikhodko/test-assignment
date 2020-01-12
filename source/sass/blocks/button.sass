@@ -1,0 +1,80 @@
+.button 
+  display: block
+  text-decoration: none
+  text-align: center
+  vertical-align: middle
+  box-sizing: border-box
+  cursor: pointer
+  appearance: none
+  background-color: transparent
+  border: none
+  opacity: 1
+  text-decoration: none
+  transition: opacity
+  transition-duration: 0.2s
+  transition-timing-function: ease-in-out
+  transition-delay: 0s
+
+.button-yellow
+  width: 100%
+  height: auto
+  padding-top: 17px
+  padding-bottom: 17px
+  margin-bottom: 24px
+  background-color: $yellow
+  text-transform: uppercase
+  box-shadow: 0px 16px 32px rgba(255, 204, 51, 0.16), 0px 4px 8px rgba(255, 204, 51, 0.08)
+  font-size: 10px
+  line-height: 12px
+  text-align: center
+  letter-spacing: -0.02em
+  color: #4D3900
+
+.button-yellow:hover,
+.button-yellow:active
+  background-color: #FFE699
+  transition: all .2s ease-in-out
+
+.button-faq
+  position: absolute
+  top: 50%
+  transform: translateY(-50%) rotate(0  )
+  right: 35px
+  width: 24px
+  height: 24px
+  padding: 0
+  appearance: none
+  border: none
+  background-color: $font-grey90
+  background-position: center
+  background-image: url("../img/arrow-down.svg")
+  background-repeat: no-repeat
+  outline: none
+  border-radius: 50%
+  transition: all 0.2s ease-in-out
+
+.button-faq:hover,
+.button-faq:active
+  background-color: $yellow
+  transition: all .2s ease-in-out
+
+.rotate
+  background-color: $yellow
+  box-shadow: 0px 16px 32px rgba(255, 204, 51, 0.16), 0px 4px 8px rgba(255, 204, 51, 0.08)
+  transform: translateY(-50%) rotate(180deg)
+  transition: all ease-in-out .2s
+
+.rotate-simple
+  transform: translateY(-50%) rotate(180deg)
+  transition: all ease-in-out .2s
+
+.button-more
+  margin-bottom: 0
+
+@media screen and (max-width: 1023px)
+  .button-yellow
+    width: 208px
+
+@media screen and (max-width: 767px)
+  .button-yellow
+    width: 100%
