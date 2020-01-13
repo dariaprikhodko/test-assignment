@@ -49,14 +49,14 @@
 
     navItem.forEach(function (item) {
       item.addEventListener('click', tabChoose);
-    })
+    });
 
     function buttonMobileRotate() {
       buttonMobile.classList.toggle('rotate-simple');
     }
 
     function navMobileToggle() {
-      this.parentElement.classList.toggle('is-active')
+      this.parentElement.classList.toggle('is-active');
     }
 
     function tabChoose() {
@@ -67,8 +67,8 @@
     }
   };
   mobileMenuOpen();
-  
-  // custom select 
+
+  // custom select
   var selectOpen = function () {
     var selectHeader = document.querySelectorAll('.components-select__header');
     var selectItem = document.querySelectorAll('.components-select__item');
@@ -81,14 +81,14 @@
 
     selectItem.forEach(function (item) {
       item.addEventListener('click', selectChoose);
-    })
+    });
 
     function buttonSelectRotate() {
       buttonSelect.classList.toggle('rotate-simple');
     }
 
     function selectToggle() {
-      this.parentElement.classList.toggle('is-active')
+      this.parentElement.classList.toggle('is-active');
     }
 
     function selectChoose() {
@@ -98,44 +98,41 @@
       currentText.innerText = text;
     }
   };
-  
   selectOpen();
 
   // add ... to faqtitles for mobile
   function truncateFaqTitles() {
     var faqTitles = Array.from(document.querySelectorAll('.long-text'));
-    var faqListPanel = document.querySelectorAll('.faq-list__panel')
+    var faqListPanel = document.querySelectorAll('.faq-list__panel');
 
     for (var i = 0; i < faqTitles.length; i++) {
-      var content = faqTitles[i].innerHTML
+      var content = faqTitles[i].innerHTML;
     }
-      var arrayText = content.split('');
-      arrayText.length = 84;
+    var arrayText = content.split('');
+    arrayText.length = 84;
 
-      var newText = arrayText.join('') + '...';
+    var newText = arrayText.join('') + '...';
 
-      if (window.innerWidth >= 768) {
-        for (var k = 0; k < faqTitles.length; k++) {
-          faqTitles[k].innerHTML = content;
-        }
-      } else {
-        for (var j = 0; j < faqTitles.length; j++) {
-          faqTitles[j].innerHTML = newText;
-        }
-      } 
+    if (window.innerWidth >= 768) {
+      for (var k = 0; k < faqTitles.length; k++) {
+        faqTitles[k].innerHTML = content;
+      }
+    } else {
+      for (var j = 0; j < faqTitles.length; j++) {
+        faqTitles[j].innerHTML = newText;
+      }
+    }
 
-      faqListPanel.forEach(function (elem) {
-        elem.addEventListener('click', function () {
-          if (elem.classList.contains('panel-open') && window.innerWidth < 768) {
-            for (var l = 0; l < faqTitles.length; l++) {
-              faqTitles[l].innerHTML = content;
-            }
+    faqListPanel.forEach(function (elem) {
+      elem.addEventListener('click', function () {
+        if (elem.classList.contains('panel-open') && window.innerWidth < 768) {
+          for (var l = 0; l < faqTitles.length; l++) {
+            faqTitles[l].innerHTML = content;
           }
-        })
+        }
       });
+    });
 
   }
   truncateFaqTitles();
-  
 })();
-
